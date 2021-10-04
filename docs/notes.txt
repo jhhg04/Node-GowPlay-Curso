@@ -1,0 +1,35 @@
+- Init
+npm init -y
+
+- Install dependencies
+npm i bcryptjs cors express express-promise-router express-validator jsonwebtoken mongoose morgan
+
+- Install DEV dependencies
+npm i  @babel/cli @babel/core @babel/node @babel/preset-env nodemon -D
+
+- Srcipts packege
+"scripts": {
+    "dev": "nodemon src/index.js --exec babel-node",
+    "build": "babel --out-dir build",
+    "start": "node build/index.js"
+  },
+  
+  
+- .babelrc
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": true
+        }
+      }
+    ]
+  ]
+}  
+
+- DB online Clever Cloud
+
+- Run
+npm run dev
